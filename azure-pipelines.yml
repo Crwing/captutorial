@@ -15,8 +15,11 @@ steps:
     script: 'npm install -g mbt @sap/cds-dk'
   displayName: Install CAP Build Tools and CAP Runtime Env
 
+- script: git branch
+  displayName: Validate Branch
+
 - script: mbt build -p=cf -s=$(Agent.BuildDirectory)/s/app1
   displayName: MTA Build
 
 - script: ls $(Agent.BuildDirectory)/s/app1/mta_archives
-  displayName: validate
+  displayName: Validate
