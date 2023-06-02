@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- 12_hana
+- azure-pipelines
 
 pool:
   vmImage: ubuntu-latest
